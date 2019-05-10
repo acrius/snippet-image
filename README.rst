@@ -3,15 +3,15 @@ snippet-image
 ============================
 
 Package for simple creation images of snippets for social networks using pillow_.
-Pictures for snippets can be inserted for sharing pages in social networks, for example in tag meta:
 
+.. _pillow: https://pillow.readthedocs.io/en/stable/
+
+Pictures for snippets can be inserted for sharing pages in social networks, for example in tag meta:
 
 .. code-block:: html
 
     <meta property="og:image" content="Link to your snippet image" />
     <meta name="twitter:image" content="Link to your snippet image" />
-
-.. _pillow: https://pillow.readthedocs.io/en/stable/
 
 Installation
 ---------------------------
@@ -39,4 +39,6 @@ To start creating images for snippets, it is enough to import the function ```fr
     with open('jake-the-dog-snippet-image.jpg', 'wb') as file:
         file.write(image_blob.getvalue())
 
-Read the docs in https://github.com/acrius/snippet-image.
+Read more on home_.
+
+.. _home: https://github.com/acrius/snippet-image.
