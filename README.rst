@@ -3,6 +3,13 @@ snippet-image
 ============================
 
 Package for simple creation images of snippets for social networks using pillow_.
+Pictures for snippets can be inserted for sharing pages in social networks, for example in tag meta:
+
+
+.. code-block:: html
+
+    <meta property="og:image" content="Link to your snippet image" />
+    <meta name="twitter:image" content="Link to your snippet image" />
 
 .. _pillow: https://pillow.readthedocs.io/en/stable/
 
