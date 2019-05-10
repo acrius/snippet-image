@@ -25,7 +25,7 @@ PURPOSE_IMAGE_WITH_SIZE_AND_BACKGROUND = join(ASSERT_PATH, 'snippet-image-with-s
 
 
 def test_version():
-    assert __version__ == '0.1.1'
+    assert __version__ == '0.1.2'
 
 
 def test_image_with_background():

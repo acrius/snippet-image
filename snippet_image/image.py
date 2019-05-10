@@ -96,10 +96,14 @@ def get_background_image(
         background=None,
         background_color=None,
 ):
+    image_mode = 'RGB'
+
     if background:
         image = Image.open(background)
     else:
-        image = Image.new('RGB', size, background_color)
+        image = Image.new(image_mode, size, background_color)
+
+    image = image.convert(image_mode) if not image.mode == image_mode else image
 
     if brightness:
         image = ImageEnhance.Brightness(image).enhance(brightness)
