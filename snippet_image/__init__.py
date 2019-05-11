@@ -1,3 +1,3 @@
 from .image import create_snippet_image
 
-__version__ = '0.1.2'
+__version__ = '0.1.3'
