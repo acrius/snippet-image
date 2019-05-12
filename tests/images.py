@@ -70,3 +70,15 @@ def generate_image_with_size_and_background():
     )
 
     return image_blob
+
+
+def generate_image_with_empty_text():
+    image_blob = create_snippet_image(
+        font=IMAGE_SNIPPET_FONT,
+        font_size=IMAGE_SNIPPET_FONT_SIZE,
+        background=IMAGE_SNIPPET_BACKGROUND,
+        overlay=IMAGE_SNIPPET_OVERLAY,
+        brightness=IMAGE_SNIPPET_BRIGHTNESS,
+    )
+
+    return image_blob

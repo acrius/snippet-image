@@ -3,12 +3,14 @@ from tests.images import (
     generate_image_without_background,
     generate_image_with_size,
     generate_image_with_size_and_background,
+    generate_image_with_empty_text,
 )
 
 PURPOSE_IMAGE_WITH_BACKGROUND = 'snippet-image-with-background.jpg'
 PURPOSE_IMAGE_WITHOUT_BACKGROUND = 'snippet-image-without-background.jpg'
 PURPOSE_IMAGE_WITH_SIZE = 'snippet-image-with-size.jpg'
 PURPOSE_IMAGE_WITH_SIZE_AND_BACKGROUND = 'snippet-image-with-size-and-background.jpg'
+PURPOSE_IMAGE_WITH_EMPTY_TEXT = 'snippet-image-with-empty-text.jpg'
 
 
 def create_images():
@@ -16,6 +18,7 @@ def create_images():
     create_image_without_background()
     create_image_with_size()
     create_image_with_size_and_background()
+    create_image_with_empty_text()
 
 
 def create_image_with_background():
@@ -47,6 +50,14 @@ def create_image_with_size_and_background():
     _save_image(
         image_blob,
         PURPOSE_IMAGE_WITH_SIZE_AND_BACKGROUND,
+    )
+
+
+def create_image_with_empty_text():
+    image_blob = generate_image_with_empty_text()
+    _save_image(
+        image_blob,
+        PURPOSE_IMAGE_WITH_EMPTY_TEXT,
     )
 
 

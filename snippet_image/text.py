@@ -13,6 +13,24 @@ def draw_text_on_image(
         font_color,
         padding,
 ):
+    return draw_multiline_text_on_image(
+        image,
+        text,
+        font,
+        font_size,
+        font_color,
+        padding
+    ) if text else image
+
+
+def draw_multiline_text_on_image(
+        image,
+        text,
+        font,
+        font_size,
+        font_color,
+        padding,
+):
     """
     Draw text on center image.
     !!! Warning. Image argument is not immutable.
