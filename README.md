@@ -140,6 +140,12 @@ Example without background and overlay
 
 ![Example without background and overlay](./assets/Show%20cases%20snippet%20images%20without%20background.png)
 
+## Integration
+
+Django: [django-snippet-image](https://github.com/acrius/django-snippet-image).
+
+Wagtail: [wagtail-snippet-image](https://github.com/acrius/wagtail-snippet-image).
+
 ## Example
 
 The example is in exmaple.py.

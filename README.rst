@@ -39,6 +39,17 @@ To start creating images for snippets, it is enough to import the function ```fr
     with open('jake-the-dog-snippet-image.jpg', 'wb') as file:
         file.write(image_blob.getvalue())
 
+Integration
+--------------------
+
+Django: `django-snippet-image`_.
+
+Wagtail: `wagtail-snippet-image`_.
+
+.. _django-snippet-image: https://github.com/acrius/django-snippet-image
+
+.. _wagtail-snippet-image: https://github.com/acrius/wagtail-snippet-image
+
 Read more on home_.
 
 .. _home: https://github.com/acrius/snippet-image.
