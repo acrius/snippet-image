@@ -7,23 +7,33 @@ def resize_image_for_snippet(
     Crop and resize the image depending on the center and size.
     !!! Warning. Image argument is not immutable.
     """
+    image, center = resize_image(image, size, center=center)
     image = crop_image(image, size, center)
-    image = resize_image(image, size)
 
     return image
 
 
-def resize_image(image, size):
-    return image.resize(size)
-
-
-def crop_image(image, size, center=None):
+def resize_image(image, size, center=None):
     if center and (not isinstance(center, tuple) or not len(center) == 2):
         raise ValueError('Center must be tuple with 2 elements - tuple(x, y).')
 
     image_width, image_height = image.size
     width, height = size
+
+    scaling_factor = max([width / image_width, height / image_height])
+    scaling_width = int(image_width * scaling_factor)
+    scaling_height = int(image_height * scaling_factor)
+
     center = center or (int(image_width / 2), int(image_height / 2))
+    center_width, center_height = center
+    center = (center_width * scaling_factor, center_height * scaling_factor)
+
+    return image.resize((scaling_width, scaling_height)), center
+
+
+def crop_image(image, size, center):
+    image_width, image_height = image.size
+    width, height = size
 
     if image_width > width or image_height > height:
         half_width = int(width / 2)
