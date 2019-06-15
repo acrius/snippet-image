@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "snippet-image"
-version = "0.1.4"
+version = "0.1.5"
 description = "Package for simple creation images of snippets for social networks using pillow. Pictures for snippets can be inserted for sharing pages in social networks, for example in tag meta:"
 license = "MIT"
 authors = ["acrius <acrius@mail.ru>"]
