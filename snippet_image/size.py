@@ -1,3 +1,6 @@
+from math import ceil
+
+
 def resize_image_for_snippet(
         image,
         size,
@@ -21,8 +24,8 @@ def resize_image(image, size, center=None):
     width, height = size
 
     scaling_factor = max([width / image_width, height / image_height])
-    scaling_width = int(image_width * scaling_factor)
-    scaling_height = int(image_height * scaling_factor)
+    scaling_width = ceil(image_width * scaling_factor)
+    scaling_height = ceil(image_height * scaling_factor)
 
     center = center or (int(image_width / 2), int(image_height / 2))
     center_width, center_height = center
