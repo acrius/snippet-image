@@ -27,7 +27,7 @@ PURPOSE_IMAGE_WITH_EMPTY_TEXT = join(ASSERT_PATH, 'snippet-image-with-empty-text
 
 
 def test_version():
-    assert __version__ == '0.1.6'
+    assert __version__ == '0.1.7'
 
 
 def test_image_with_background():

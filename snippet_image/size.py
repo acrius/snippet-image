@@ -10,8 +10,11 @@ def resize_image_for_snippet(
     Crop and resize the image depending on the center and size.
     !!! Warning. Image argument is not immutable.
     """
+    # Proportional resizing
     image, center = resize_image(image, size, center=center)
     image = crop_image(image, size, center)
+    # Purpose resizing
+    image.resize(size)
 
     return image
 
